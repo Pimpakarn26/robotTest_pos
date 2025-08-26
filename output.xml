@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.5 on win32)" generated="2025-08-26T18:31:07.854578" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests" source="D:\robot-pos\login_tests">
+<suite id="s1-s1" name="Valid Login" source="D:\robot-pos\login_tests\valid_login.robot">
+<test id="s1-s1-t1" name="Valid Login" line="9">
+<kw name="Open Browser To Login Page" owner="resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-26T18:31:08.492595" level="INFO">Opening browser 'chrome' to base url 'https://posible.vercel.app/login'.</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-26T18:31:08.492595" elapsed="2.094193"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-26T18:31:10.586788" elapsed="0.049046"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-08-26T18:31:10.636832" elapsed="0.001017"/>
+</kw>
+<kw name="Login Page Should Be Open" owner="resource">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-08-26T18:31:10.751417" level="INFO">Page title is 'POSSIBLE'.</msg>
+<arg>POSSIBLE</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-08-26T18:31:10.639271" elapsed="0.112146"/>
+</kw>
+<status status="PASS" start="2025-08-26T18:31:10.637849" elapsed="0.113568"/>
+</kw>
+<status status="PASS" start="2025-08-26T18:31:08.491545" elapsed="2.259872"/>
+</kw>
+<kw name="Input Username" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-26T18:31:10.752539" elapsed="0.244392"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-26T18:31:10.997443" level="INFO">Typing text 'bonus' into text field 'username'.</msg>
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-26T18:31:10.997443" elapsed="0.487697"/>
+</kw>
+<arg>bonus</arg>
+<status status="PASS" start="2025-08-26T18:31:10.752539" elapsed="0.732601"/>
+</kw>
+<kw name="Input Password" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>password</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-26T18:31:11.486294" elapsed="0.234675"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-26T18:31:11.721484" level="INFO">Typing text '1234' into text field 'password'.</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-26T18:31:11.721484" elapsed="0.447383"/>
+</kw>
+<arg>1234</arg>
+<status status="PASS" start="2025-08-26T18:31:11.486294" elapsed="0.683573"/>
+</kw>
+<kw name="Submit Credentials" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/form/div[2]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-26T18:31:12.176868" elapsed="0.254992"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-08-26T18:31:12.432930" level="INFO">Clicking button 'xpath=//*[@id="root"]/div/div/div/form/div[2]/button'.</msg>
+<arg>xpath=//*[@id="root"]/div/div/div/form/div[2]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-26T18:31:12.431860" elapsed="0.768481"/>
+</kw>
+<status status="PASS" start="2025-08-26T18:31:12.175868" elapsed="1.024473"/>
+</kw>
+<kw name="Welcome Page Should Be Open" owner="resource">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-08-26T18:31:13.688975" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-08-26T18:31:13.688975" level="FAIL">Location should have been 'https://posible.vercel.app/order-sell' but was 'https://posible.vercel.app/login'.</msg>
+<arg>${WELCOME URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="FAIL" start="2025-08-26T18:31:13.201354" elapsed="0.490265">Location should have been 'https://posible.vercel.app/order-sell' but was 'https://posible.vercel.app/login'.</status>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>สินค้าทั้งหมด</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2025-08-26T18:31:13.691619" elapsed="0.001000"/>
+</kw>
+<status status="FAIL" start="2025-08-26T18:31:13.201354" elapsed="0.491265">Location should have been 'https://posible.vercel.app/order-sell' but was 'https://posible.vercel.app/login'.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-26T18:31:13.693638" elapsed="2.286649"/>
+</kw>
+<status status="FAIL" start="2025-08-26T18:31:08.490015" elapsed="7.490272">Location should have been 'https://posible.vercel.app/order-sell' but was 'https://posible.vercel.app/login'.</status>
+</test>
+<doc>A test suite with a single test for valid login.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="FAIL" start="2025-08-26T18:31:07.924559" elapsed="8.057909"/>
+</suite>
+<status status="FAIL" start="2025-08-26T18:31:07.857983" elapsed="8.126564"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Tests" id="s1" pass="0" fail="1" skip="0">Login Tests</stat>
+<stat name="Valid Login" id="s1-s1" pass="0" fail="1" skip="0">Login Tests.Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
